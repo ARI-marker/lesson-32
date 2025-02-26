@@ -7,13 +7,17 @@
 </head>
 <body>
 
-  <h1>Enter Name</h1>
+  <h1>Enter Name and Surname</h1>
 
-  <input type="text" id="nameInput" placeholder="Enter a name">
-  <button onclick="addName()">Add Name</button>
+  <!-- Fushe për të shtuar emrin dhe mbiemrin -->
+  <input type="text" id="firstNameInput" placeholder="First Name">
+  <button onclick="addFirstName()">Add First Name</button>
 
-  <h3>List of Names:</h3>
-  <ul id="nameList"></ul>
+  <input type="text" id="lastNameInput" placeholder="Last Name">
+  <button onclick="addLastName()">Add Last Name</button>
+
+  <h3>Full Name</h3>
+  <p id="fullName"></p>
 
 
 

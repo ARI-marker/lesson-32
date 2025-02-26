@@ -3,17 +3,24 @@ let array = ["apple", "banana", "cherry", "kiwi"];
 for (let i = 0; i < array.length; i++) {
   console.log("Element at index " + i + " is: " + array[i]);
 }
+let firstName = '';
+let lastName = '';
 
-let nameList = [];
+    // Funksioni për të shtuar emrin
+    function addFirstName() {
+      firstName = document.getElementById('firstNameInput').value;
+      document.getElementById('firstNameInput').value = '';  // Pastroni inputin
+      FullName();
+    }
 
-    // Funksioni për të shtuar emrin në listë
-    function addName() {
-      let name = document.getElementById('nameInput').value;
-      if (name) {
-        nameList.push(name);  // Shto emrin në listë
-        document.getElementById('nameInput').value = '';  // Pastroni inputin
+    // Funksioni për të shtuar mbiemrin
+    function addLastName() {
+      lastName = document.getElementById('lastNameInput').value;
+      document.getElementById('lastNameInput').value = '';  // Pastroni inputin
+      FullName();
+    }
 
-        // Krijoni elementin <li> dhe shtohet direkt në listë
-        document.getElementById('nameList').innerHTML += `<li>${name}</li>`;
-      }
+    // Funksioni për të shfaqur emrin e plotë
+    function FullName() {
+      document.getElementById('fullName').textContent = firstName + ' ' + lastName;
     }
